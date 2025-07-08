@@ -7,7 +7,7 @@ import {
   type Message, type InsertMessage, type Notification, type InsertNotification,
   type Setting, type InsertSetting, type Visitor, type InsertVisitor,
   type PageView, type InsertPageView
-} from "server/shared/schema";
+} from "./shared/schema";
 import { db } from "./db";
 import { eq, desc, and, sql } from "drizzle-orm";
 
