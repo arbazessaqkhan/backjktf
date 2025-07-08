@@ -1,5 +1,5 @@
-import { db } from './db';
-import { products } from './shared/schema';
+import { db } from './db.js';
+import { products } from './shared/schema.js';
 
 (async () => {
   const result = await db.select().from(products).limit(1);

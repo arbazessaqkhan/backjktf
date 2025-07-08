@@ -7,8 +7,8 @@ import {
   type Message, type InsertMessage, type Notification, type InsertNotification,
   type Setting, type InsertSetting, type Visitor, type InsertVisitor,
   type PageView, type InsertPageView
-} from "./shared/schema";
-import { db } from "./db";
+} from "./shared/schema.js";
+import { db } from "./db.js";
 import { eq, desc, and, sql } from "drizzle-orm";
 
 export interface IStorage {

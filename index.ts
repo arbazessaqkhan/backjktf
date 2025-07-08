@@ -1,9 +1,9 @@
 import cors from "cors";
 import express, { Request, Response, NextFunction } from "express";
-import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
-import { db } from "./db"; // ✅ adjust if db is from somewhere else
-import { products } from "server/shared/schema"; // ✅ needed for /api/health test route
+import { registerRoutes } from "./routes.js";
+import { setupVite, serveStatic, log } from "./vite.js";
+import { db } from "./db.js"; // ✅ adjust if db is from somewhere else
+import { products } from "./shared/schema.js"; // ✅ needed for /api/health test route
 
 const app = express();
 
