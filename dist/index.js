@@ -975,7 +975,7 @@ app.get("/api/health", async (_req, res) => {
     console.error("\u274C Global Error Handler:", err);
     res.status(status).json({ error: message });
   });
-  const port = 5e3;
+  const port = process.env.PORT || 5e3;
   server.listen({ port, host: "0.0.0.0" }, () => {
     log(`\u2705 Server running on http://localhost:${port}`);
   });
