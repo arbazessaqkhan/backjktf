@@ -117,12 +117,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.delete("/api/products/:id", async (req, res) => {
     try {
       const productId = parseInt(req.params.id);
+      const product = await storage.getProduct(productId);
+      if (!product) {
+        return res.status(404).json({ error: "Product not found" });
+      }
       await storage.deleteProduct(productId);
       res.json({ success: true });
     } catch (error) {
+      console.error("Delete product error:", error);
       res.status(500).json({ error: "Failed to delete product" });
     }
   });
+  
 
   // Cart Management Routes
   app.get("/api/cart/:sessionId", async (req, res) => {
