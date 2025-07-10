@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://fantastic-boba-6184f4.netlify.app"
+    "https://jktfeed.netlify.app"
   ],
   credentials: false,
 }));
